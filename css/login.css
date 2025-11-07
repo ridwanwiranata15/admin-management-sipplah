@@ -20,8 +20,8 @@ body{
 }
 
 aside{
-    background-color: green;
-    color: white;
+    background: linear-gradient(to right, #89F7FE, #66A6FF);
+    color: black;
     height: 100vh;
 }
 
@@ -46,14 +46,14 @@ aside{
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: black;
     padding: 20px;
     transition: .3s ease;
 }
 
 .sidebar a:hover{
     background-color: white;
-    color: green;
+    color: black;
 }
 
 .sidebar a span{
@@ -94,6 +94,22 @@ main .header h3{
 .hamburger{
     display: none;
 }
+.card{
+    box-shadow: 0px 2px 10px #BBBBBB;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    border-radius: 10px;
+}
+.card span{
+    font-size: 70px;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
 
 
 /* responsive */
@@ -117,7 +133,7 @@ main .header h3{
         display: block;
         position: absolute;
         z-index: 10;
-        margin-top: 60px;
+        margin-top: 67px;
         animation: slideLeft 0.4s ease-out forwards;
     }
 
@@ -125,8 +141,11 @@ main .header h3{
         display: block;
         position: absolute;
         z-index: 10;
-        margin-top: 60px;
+        margin-top: 67px;
         animation: slideRight 0.4s ease-out forwards;
+    }
+    .cards{
+        margin-left: 10px;
     }
 }
 
@@ -152,4 +171,153 @@ main .header h3{
         opacity: 0;
         transform: translateX(-80px);
     }
+}
+
+.card-table{
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,.1);
+    width: 100%;
+    overflow-x: auto;
+    color: black;
+}
+
+/* Header */
+.card-table-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+     background: linear-gradient(to right, #89F7FE, #66A6FF);
+    color: black;
+    padding: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-table-header h4{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-table-header button{
+    padding: 8px 16px;
+    border: none;
+    background: lightgreen;
+    border-radius: 6px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Searching/filter */
+.card-table-searching{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.searching-input{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    border-radius: 6px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.searching-input input{
+    border: none;
+    outline: none;
+    margin-left: 6px;
+    width: 100%;
+}
+
+.searching-select select{
+    border: 1px solid #ddd;
+    padding: 6px 10px;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* table */
+.card-table-content table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* biar responsive scroll */
+}
+
+.card-table-content th, .card-table-content td{
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-align: left;
+}
+
+.card-table-content th{
+    background: #89F7FE;
+    font-weight: 600;
+}
+.card-table-content td{
+    cursor: pointer;
+}
+/* pagination */
+.card-table-footer{
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination{
+    display: flex;
+    gap: 6px;
+    background: linear-gradient(to right, #89F7FE, #66A6FF);
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.pagination-item{
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+.items-pagination{
+    display: flex;
+    gap: 1;
+    margin-left: 460px;
+}
+
+/* responsive breakpoint */
+@media(max-width: 768px){
+    .card-table-searching{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .card-table-header{
+        display: block;
+    }
+    .card-table-header button{
+        margin-top: 10px;
+    }
+    .card-table-content{
+        display: none;
+    }
+    .items-pagination{
+        margin: unset;
+    }
+    .pagination-item:nth-child(4),
+    .pagination-item:nth-child(5){
+        display: none;
+    }
+}
+footer{
+    padding: 10px;
+    text-align: center;
 }
