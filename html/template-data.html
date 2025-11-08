@@ -58,57 +58,9 @@
                 </div>
             </div>
             <div class="content">
-                <div class="cards">
-                    <div class="card">
-                        <div class="">
-                            <h3>Total Siswa</h3>
-                            <h3>120</h3>
-                        </div>
-                        <span class="material-icons-sharp">
-                            person_outline
-                        </span>
-                    </div>
-                    <div class="card">
-                        <div class="">
-                            <h3>Total Siswa</h3>
-                            <h3>120</h3>
-                        </div>
-                        <span class="material-icons-sharp">
-                            person_outline
-                        </span>
-                    </div>
-                    <div class="card">
-                        <div class="">
-                            <h3>Total Siswa</h3>
-                            <h3>120</h3>
-                        </div>
-                        <span class="material-icons-sharp">
-                            person_outline
-                        </span>
-                    </div>
-                    <div class="card">
-                        <div class="">
-                            <h3>Total Siswa</h3>
-                            <h3>120</h3>
-                        </div>
-                        <span class="material-icons-sharp">
-                            person_outline
-                        </span>
-                    </div>
-                    <div class="card">
-                        <div class="">
-                            <h3>Total Siswa</h3>
-                            <h3>120</h3>
-                        </div>
-                        <span class="material-icons-sharp">
-                            person_outline
-                        </span>
-                    </div>
-                </div>
-
                 <div class="card-table">
                     <div class="card-table-header">
-                        <h4>Data pembayaran</h4>
+                        <h4>Data Siswa</h4>
                         <button>Tambah data</button>
                     </div>
                     <div class="card-table-searching">
@@ -180,23 +132,95 @@
                         <div class="pagination">
                             <div class="items-pagination">
                                 <div class="pagination-item">
-                                    <<
+                                    << </div>
+                                        <div class="pagination-item">1</div>
+                                        <div class="pagination-item">2</div>
+                                        <div class="pagination-item">3</div>
+                                        <div class="pagination-item">4</div>
+                                        <div class="pagination-item">5</div>
+                                        <div class="pagination-item">>></div>
                                 </div>
-                                <div class="pagination-item">1</div>
-                                <div class="pagination-item">2</div>
-                                <div class="pagination-item">3</div>
-                                <div class="pagination-item">4</div>
-                                <div class="pagination-item">5</div>
-                                <div class="pagination-item">>></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <footer>
-                <span>Copyright &copy; 2025 - Jariyah.App</span>
-            </footer>
+                <footer>
+                    <span>Copyright &copy; 2025 - Jariyah.App</span>
+                </footer>
+
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modal-content-header">
+                            <h1>Tambah siswa baru</h1>
+                            <span>X</span>
+                        </div>
+
+                        <div class="modal-content-body">
+                            <form method="post">
+
+                                <div class="form-group">
+                                    <label>Nama Siswa</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Foto profil</label>
+                                    <input type="file" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nisn</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nis</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Kompetensi keahlian</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tanggal lahir</label>
+                                    <input type="date" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Alamat</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="modal-content-footer">
+                                    <button type="submit" disabled={loadingCreate}>
+                                        Add student
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
         </main>
 
     </div>

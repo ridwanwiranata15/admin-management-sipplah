@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="shortcut icon" href="../image/alhafidz-logo-Custom.png" type="image/x-icon">
+    <title>Responsive Dashboard Design #1 | AsmrProg</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside class="hide-side">
+            <div class="toggle">
+                <div class="logo">
+                    <img src="../image/alhafidz-logo-Custom.png">
+                    <h2>SIPP<span class="danger">LAH</span></h2>
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Students</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        announcement
+                    </span>
+                    <h3>Announcement</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <main>
+            <div class="header">
+                <h2 class="title-text">Sistem Informasi Pembayaran Sekolah</h2>
+                <h2 class="hamburger">|||</h2>
+                <div class="profile-section">
+                    <img src="../image/alhafidz-logo-Custom.png" alt="">
+                    <h3>Nama</h3>
+                </div>
+            </div>
+            <div class="content">
+                <div class="card-table">
+                    <div class="card-table-header">
+                        <h4>Data (nama siswa)</h4>
+                    </div>
+                    <div class="card-content-detail">
+                        <div class="img-detail-content">
+                            <img src="../image/profile.png" alt="" width="400px">
+                        </div>
+                        <div class="data-detail-content">
+                            <div className="detail-info">
+                                <p><b>Nama:</b> {student.name}</p>
+                                <p><b>Email:</b> {student.users.email}</p>
+                                <p><b>Username:</b> {student.users.username}</p>
+                                <p><b>NISN:</b> {student.nisn}</p>
+                                <p><b>NIS:</b> {student.nis}</p>
+                                <p><b>Keahlian:</b> {student.expertise}</p>
+                                <p><b>Tanggal lahir:</b> {student.date}</p>
+                                <p><b>Alamat:</b> {student.address}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-table-footer">
+                        <div class="pagination">
+                           <button>Edit</button>
+                           <button>Delete</button>
+                        </div>
+                    </div>
+                </div>
+
+                <footer>
+                    <span>Copyright &copy; 2025 - Jariyah.App</span>
+                </footer>
+
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modal-content-header">
+                            <h1>Tambah siswa baru</h1>
+                            <span>X</span>
+                        </div>
+
+                        <div class="modal-content-body">
+                            <form method="post">
+
+                                <div class="form-group">
+                                    <label>Nama Siswa</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Username</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Foto profil</label>
+                                    <input type="file" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nisn</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Nis</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Kompetensi keahlian</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Tanggal lahir</label>
+                                    <input type="date" />
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Alamat</label>
+                                    <input type="text" />
+                                </div>
+
+                                <div class="modal-content-footer">
+                                    <button type="submit" disabled={loadingCreate}>
+                                        Add student
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
+
+
+                    </div>
+                </div>
+        </main>
+
+    </div>
+
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>
